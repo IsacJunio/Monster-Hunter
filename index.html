@@ -1,11 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="icon" href="src/images/Logo-MH.png">
+    <script src="src/js/script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Teste</title>
+
+            <!-- Botão para volta a pagina -->
+            <button id="btnTopo" onclick="voltarParaHome()"><i class="fa-solid fa-arrow-up"></i></button>
 </head>
 <body>
     
+    <header>
+        <nav class="container">
+            <div class="home"><a href="#home">INICIO</a></div>
+            <div class="home"><a href="#sobre">SOBRE</a></div>
+            <div class="home"><a href="#">FORMULARIO</a></div>
+        </nav>
+    </header><!--Rot Bar-->
+
+    <main>
+    
+        <section class="home-principal" id="home">
+            <div class="container">
+                    <div class="img-container">
+                        <img src="src/images/Logo-MH.png" alt="Logo" class="img">
+                    </div>
+                <h1>Fan Base <span>Mosnter Hunter</span>.</h1>
+                <p>Bem-vindo, Hunter! ⚔️🔥 Aqui é o lugar para fãs de Monster Hunter se reunirem, trocarem estratégias, novidades e celebrarem grandes caçadas. Prepare seu equipamento e junte-se à nossa comunidade! 🎮🐉</p>
+                <p> Se quiser ainda mais curto ou com outro tom, me avise! 🚀</p>
+            </div><!--container-->
+        </section> <!--home-principal-->
+
+        <section class="sobre" id="sobre">
+            <div class="container">
+                <h1>O que é Monster Hunter</h1>
+                <div class="vd-sobre">
+                    <video class="vd-mh" controls poster="src/images/fundo-mh.jpeg">
+                        <source src="src/videos/mh.mp4" >
+                    </video>
+                </div><!--video monster hunte-->
+                <button class="btn-sobre"><a href="https://www.youtube.com/@LopsMH">Canal do vídeo</a></button>
+            </div> <!--container-->
+        </section><!--Sobre-->
+    
+    </main>
 </body>
 </html>

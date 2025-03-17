@@ -1,0 +1,193 @@
+/* GERAL */
+
+html {
+    font-family: Poppis, sans-serif;
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.color1 {color: #060622;}
+.color2 {color: #202a42;}
+.color3 {color: #5f5f6d;}
+.color4 {color: #95939e;}
+.color5 {color: #cdcfca;}
+.color6 {color: #ff4500;}
+
+body {
+    background-color: #060622;
+    padding: 40px 4%;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+}
+
+section {
+    margin-top: 100px;
+    padding: 40px;
+    box-shadow: 0px 4px 10px #ff4500;
+    border-radius: 10px;
+}
+
+/* Rot bar */
+
+
+header {
+    padding: 40px 4%;
+    background-color: #cdcfca;
+    display: flex;
+    border-radius: 0 0 15px 15px;
+    justify-content: center;
+    align-content: center;
+}
+
+header .container {
+    display: flex;
+    top: 0;
+    gap: 100px;
+    height: 10px;
+}
+
+header .home a{
+    text-decoration: none;
+    color: #060622;
+    font-size: 20px;
+    transition: .2s;
+}
+
+header .home a:hover {
+    color: #ff4500;
+    transform: scale(1.5);
+}
+
+
+
+
+/* Home */
+
+
+
+.home-principal .container{
+
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
+
+.home-principal .container p {
+    word-wrap: break-word;
+    color: #fff;
+    word-wrap: break-word;
+    white-space: small;
+    width: 1000px;
+    font-size: 30px;
+    gap: 50px;
+    margin: 20px;
+}
+
+.home-principal .container h1 {
+    justify-content: center;
+    align-items: center;
+    color: #95939e;
+    font-size: 50px;
+}
+
+.home-principal .container h1 span {
+    color: #a52a2a;
+}
+
+.img-container{
+    background-color: #5e333393;
+    justify-content: center;
+    align-items: center;
+    border-radius: 250px;
+}
+
+.img-container img{
+    display: flex;
+    width: 500px;
+    height: 400px;
+}
+
+/* Sobre */
+
+.sobre {
+    margin-top: 120px;
+    height: 800px;
+}
+
+.sobre .container {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    gap: 130px;
+}
+
+.sobre .container h1 {
+    color: #a52a2a;
+    font-size: 60px;
+}
+
+.sobre .vd-sobre .vd-mh  {
+    width: 600px;
+}
+
+.sobre .container .btn-sobre  {
+    background-color: #cc3700;
+    font-size: 20px;
+    width: 200px;
+    height: 50px;
+    border-radius: 15px;
+    box-shadow: 15px 15px 15px 15px #060622;
+    cursor: pointer;
+    transition: .3s;
+}
+
+
+
+.sobre .container .btn-sobre:hover {
+    background-color: #fff;
+    transform: scale(1.08);
+}
+
+.sobre .container .btn-sobre a {
+    text-decoration: none;
+    color: #fff;
+    transition: .3s;
+}
+
+.sobre .container .btn-sobre a:hover {
+    color: #060622;
+    transform: scale(1.08);
+}
+
+
+/* Botão para voltar a pagina */
+
+#btnTopo {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none; /* Oculto por padrão */
+    background-color: #ff4500;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+#btnTopo:hover {
+    background-color: #cc3700;
+}
