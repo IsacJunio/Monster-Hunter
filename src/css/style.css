@@ -168,28 +168,33 @@ header .home a:hover {
 /* Teorias */
 
 .teorias {
-    padding: 50px 50px;
+    padding: 40px 4%;
     display: flex;
     justify-content: center;
     align-items: start;
 }
 
+.teorias .container img {
+    width: 300px;
+}
+
+
 .teorias .container {
-    margin: 89px;
+    margin: 60px;
 }
 
 .teorias .container h3{
     margin-top: 40px;
     color: #FFF;
-    font-size: 27px
+    font-size: 20px
 }
 
 
 .teorias .container p {
     margin-top: 20px;
     margin-bottom: 20px;
-    width: 450px;
-    font-size: 25px;
+    width: 350px;
+    font-size: 15px;
     color: #FFF;
     font-weight: 450;
 }
@@ -388,5 +393,7 @@ button:hover {
 #btnTopo:hover {
     background-color: #cc3700;
 }
+
+
 
 
