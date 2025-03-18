@@ -23,11 +23,6 @@ body {
     padding: 40px 4%;
 }
 
-.container {
-    max-width: 1280px;
-    margin: 0 auto;
-    display: flex;
-}
 
 section {
     margin-top: 100px;
@@ -170,19 +165,221 @@ header .home a:hover {
     transform: scale(1.08);
 }
 
+/* Teorias */
+
+.teorias {
+    padding: 50px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+.teorias .container {
+    margin: 89px;
+}
+
+.teorias .container h3{
+    margin-top: 40px;
+    color: #FFF;
+    font-size: 27px
+}
+
+
+.teorias .container p {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 450px;
+    font-size: 25px;
+    color: #FFF;
+    font-weight: 450;
+}
+
+
+
+/* Rotbar */
+footer {
+    display: inline-flex;
+    background-color:#cdcfca;
+    color: black;
+    text-align: center;
+    padding: 20px;
+    position: static;
+    bottom: 0;
+    width: 100%;
+    margin-top: 100px;
+    border-radius: 15px 15px 0 0 ;
+    font-size: 25px;
+    justify-content: center;
+    align-content: center;
+}
+
+/* Imagem Galeria */
+
+#image-gallery {
+    padding: 50px 50px;
+    text-align: center;
+}
+
+#image-gallery h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #FFf;
+}
+
+form {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+input[type="file"] {
+    padding: 10px;
+    color: #fff;
+    font-size: 25px;
+    margin-right: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    background-color: #cc3700;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 25px;
+    cursor: pointer;
+    border-radius: 15px;
+    transition: .3s;
+}
+
+button:hover {
+    background-color: #a52a2a;
+    transform: scale(1.05);
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.gallery img {
+    width: auto;
+    height: 700px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Feedbeck */
+
+.swiper-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px ;
+    background-color: #fff;
+    font-size: 20px;
+    border-radius: 15px;
+}
+
+.swiper-slide {
+    display: flex;
+    align-self: center;
+    justify-items: center;
+}
+
+.swiper-slide div {
+   margin-bottom: 80px;
+}
+
+.swiper-slide blockquote {
+    width: 350px;
+    text-align: center;
+}
+
+.swiper {
+    width: 600px;
+    height: 300px;
+  }
+
+/* Formulario */
+
+#form-feedbeck {
+    display: flex;
+    justify-content: center;  /* Centraliza horizontalmente */
+    align-items: center;      /* Centraliza verticalmente */
+    height: 100vh;           /* Ocupa toda a altura da tela */
+
+  }
+  
+#form-feedbeck .container {
+    background: transparent;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;  /* Define uma largura máxima para o formulário */
+    text-align: center;
+  }
+
+  #form-feedbeck .container h2 {
+    color: #fff;
+    font-size: 30px;
+  }
+  
+  .form-feedbeck {
+    display: flex;
+    flex-direction: column; /* Organiza os elementos em coluna */
+  }
+  
+  label {
+    font-size: 60px;
+    color: #fff;
+    font-weight: bold;
+    margin: 10px 0 5px;
+    text-align: left;
+  }
+  
+  #form-feedbeck .container input, textarea {
+    color: #060622;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 30px;
+  }
+  
+  button {
+    background-color: #cc3700;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  button:hover {
+    background-color: #a52a2a;
+  }
+  
 
 /* Botão para voltar a pagina */
 
 #btnTopo {
     position: fixed;
-    bottom: 20px;
+    bottom: 30px;
     right: 20px;
     display: none; /* Oculto por padrão */
     background-color: #ff4500;
     color: white;
     border: none;
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: 30px;
     cursor: pointer;
     border-radius: 5px;
     transition: 0.3s;
@@ -191,3 +388,5 @@ header .home a:hover {
 #btnTopo:hover {
     background-color: #cc3700;
 }
+
+
