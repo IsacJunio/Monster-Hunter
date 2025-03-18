@@ -18,7 +18,18 @@ function voltarParaHome() {
     document.getElementById("home").scrollIntoView({ behavior: "smooth" });
 }
 
-// Galeria de imagem
+// Galeria de imagem com localStorage
+
+document.addEventListener("DOMContentLoaded", function () {
+    const gallery = document.getElementById("gallery");
+    const storedImages = JSON.parse(localStorage.getItem("galleryImages")) || [];
+    
+    storedImages.forEach(src => {
+        const imgElement = document.createElement("img");
+        imgElement.src = src;
+        gallery.appendChild(imgElement);
+    });
+});
 
 document.getElementById("imageForm").addEventListener("submit", function (e) {
     e.preventDefault();
@@ -28,24 +39,45 @@ document.getElementById("imageForm").addEventListener("submit", function (e) {
   
     const file = fileInput.files[0]; // Pega o arquivo da imagem
     if (file) {
-      const reader = new FileReader();
+        const reader = new FileReader();
   
-      // Quando a imagem for carregada, adiciona à galeria
-      reader.onload = function (event) {
-        const imgElement = document.createElement("img");
-        imgElement.src = event.target.result; // A URL da imagem carregada
-        gallery.appendChild(imgElement); // Adiciona a imagem à galeria
-      };
+        // Quando a imagem for carregada, adiciona à galeria e salva no localStorage
+        reader.onload = function (event) {
+            const imgElement = document.createElement("img");
+            imgElement.src = event.target.result; // A URL da imagem carregada
+            gallery.appendChild(imgElement); // Adiciona a imagem à galeria
   
-      reader.readAsDataURL(file); // Converte a imagem para uma URL base64
+            // Salva no localStorage
+            const storedImages = JSON.parse(localStorage.getItem("galleryImages")) || [];
+            storedImages.push(event.target.result);
+            localStorage.setItem("galleryImages", JSON.stringify(storedImages));
+        };
+  
+        reader.readAsDataURL(file); // Converte a imagem para uma URL base64
     }
   
     // Limpa o input de arquivo após o upload
     fileInput.value = "";
-  });
-  
+});
 
-// Feedbeck 
+// Feedback com localStorage
+
+document.addEventListener("DOMContentLoaded", function () {
+    const feedbackList = document.querySelector(".swiper-wrapper");
+    const storedFeedbacks = JSON.parse(localStorage.getItem("feedbacks")) || [];
+    
+    storedFeedbacks.forEach(feedback => {
+        const novoFeedback = document.createElement("div");
+        novoFeedback.classList.add("swiper-slide");
+        novoFeedback.innerHTML = `
+          <div class="Nome">${feedback.nome}</div>
+          <blockquote class="text-feedbeck">${feedback.comentario}</blockquote>
+        `;
+        feedbackList.appendChild(novoFeedback);
+    });
+    swiper.update();
+});
+
 // Inicializa o Swiper
 var swiper = new Swiper(".swiper", {
     loop: true,
@@ -61,10 +93,10 @@ var swiper = new Swiper(".swiper", {
       delay: 3000,
       disableOnInteraction: false,
     },
-  });
+});
   
-  // Captura o evento de envio do formulário
-  document.getElementById("form-feedbeck").addEventListener("submit", function(event) {
+// Captura o evento de envio do formulário
+document.getElementById("form-feedbeck").addEventListener("submit", function(event) {
     event.preventDefault(); // Impede o recarregamento da página
   
     const nomeInput = document.getElementById("nome");
@@ -87,6 +119,11 @@ var swiper = new Swiper(".swiper", {
     const feedbackList = document.querySelector(".swiper-wrapper");
     feedbackList.appendChild(novoFeedback);
   
+    // Salvar no localStorage
+    const storedFeedbacks = JSON.parse(localStorage.getItem("feedbacks")) || [];
+    storedFeedbacks.push({ nome, comentario });
+    localStorage.setItem("feedbacks", JSON.stringify(storedFeedbacks));
+  
     // Atualizar Swiper para reconhecer o novo slide
     swiper.update();
     swiper.slideToLoop(0); // Mantém o loop funcional
@@ -94,5 +131,4 @@ var swiper = new Swiper(".swiper", {
     // Limpar manualmente os campos do formulário
     nomeInput.value = "";
     comentarioInput.value = "";
-  });
-  
+});
